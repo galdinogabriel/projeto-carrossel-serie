@@ -63,7 +63,7 @@ body {
 }
 
 .botao {
-    padding: 8px;
+    padding: 5px;
     border-radius: 50%;
     background: white;
     border: 3px solid white;
@@ -88,6 +88,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    z-index: 1;
 
 }
 
