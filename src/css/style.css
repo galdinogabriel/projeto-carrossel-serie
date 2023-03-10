@@ -1,11 +1,13 @@
-body{
+body {
     width: 100vw;
     height: 100vh;
     padding: 0px;
     margin: 0px;
-   
+    background: black;
+
 }
-.imagem{
+
+.imagem {
     display: none;
     position: fixed;
     z-index: -1;
@@ -14,42 +16,65 @@ body{
     object-fit: cover;
     animation-name: transicaoImagem;
     animation-duration: 1s;
- 
-  
- 
+
+
+
 }
-.imagem.active{
+
+.imagem.active {
     display: block;
 }
 
-.menu-lateral{
-    display: none;
+.menu-lateral {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+
+ 
+}
+.menu-lateral ul{
+  margin: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
 }
 
-.logo{
+.icone{
+    width: clamp(20px,10vw,50px);
     filter: brightness(0%) invert(100%);
-    width: 30%;
 }
 
-.descricao{
+.logo {
+    filter: brightness(0%) invert(100%);
+    width: clamp(200px,50vw,500px);
+}
+
+.descricao {
     font-family: Poppins;
     color: white;
-    font-size:22px;
-    max-width: 40vw;
+    font-size: clamp(16px, 2.1vw, 22px);
+    max-width: 60vw;
 }
-.botao{
+
+.botao {
     padding: 8px;
     border-radius: 50%;
     background: white;
-    border: 2px solid white;
+    border: 3px solid white;
     cursor: pointer;
- 
+
 }
 
-.botao.active{
+.botao.active {
     background: brown;
 }
-.conteudo{
+
+.conteudo {
     margin-left: 10%;
     margin-right: 10%;
     height: 100vh;
@@ -58,19 +83,20 @@ body{
     justify-content: space-evenly;
 }
 
-.botoes-carrossel{
+.botoes-carrossel {
     display: flex;
     justify-content: center;
     gap: 20px;
-    
+
 }
 
-.informacoes{
+.informacoes {
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
-.conteudo::after{
+
+.conteudo::after {
     content: '';
     position: absolute;
     background: black;
@@ -78,17 +104,18 @@ body{
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.22452731092436973) 50%, rgba(0,0,0,1) 100%);
-    
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.22452731092436973) 50%, rgba(0, 0, 0, 1) 100%);
+
 }
 
 
 @keyframes transicaoImagem {
-    from{
+    from {
         transform: translateX(50px);
     }
-    to{
-transform: translateX(0px);
+
+    to {
+        transform: translateX(0px);
     }
 }
