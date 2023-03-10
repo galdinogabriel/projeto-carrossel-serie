@@ -1,0 +1,94 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+   
+}
+.imagem{
+    display: none;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation-name: transicaoImagem;
+    animation-duration: 1s;
+ 
+  
+ 
+}
+.imagem.active{
+    display: block;
+}
+
+.menu-lateral{
+    display: none;
+}
+
+.logo{
+    filter: brightness(0%) invert(100%);
+    width: 30%;
+}
+
+.descricao{
+    font-family: Poppins;
+    color: white;
+    font-size:22px;
+    max-width: 40vw;
+}
+.botao{
+    padding: 8px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid white;
+    cursor: pointer;
+ 
+}
+
+.botao.active{
+    background: brown;
+}
+.conteudo{
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.botoes-carrossel{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.conteudo::after{
+    content: '';
+    position: absolute;
+    background: black;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.22452731092436973) 50%, rgba(0,0,0,1) 100%);
+    
+}
+
+
+@keyframes transicaoImagem {
+    from{
+        transform: translateX(50px);
+    }
+    to{
+transform: translateX(0px);
+    }
+}
