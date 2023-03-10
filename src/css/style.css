@@ -58,8 +58,8 @@ body {
 .descricao {
     font-family: Poppins;
     color: white;
-    font-size: clamp(16px, 2.1vw, 22px);
-    max-width: 60vw;
+    font-size: clamp(14px, 2.1vw, 22px);
+    max-width: 40vw;
 }
 
 .botao {
