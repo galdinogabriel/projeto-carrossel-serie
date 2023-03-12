@@ -1,11 +1,17 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
 body {
     width: 100vw;
     height: 100vh;
-    padding: 0px;
-    margin: 0px;
+   
     background: black;
-
 }
+
 
 .imagem {
     display: none;
@@ -36,7 +42,6 @@ body {
 }
 .menu-lateral ul{
     list-style: none;
-    margin: 0px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -59,29 +64,28 @@ body {
     font-family: Poppins;
     color: white;
     font-size: clamp(14px, 2.1vw, 22px);
-    max-width: 40vw;
+    max-width: 65vw;
 }
 
 .botao {
-    padding: 5px;
+    padding: 7px;
     border-radius: 50%;
     background: white;
-    border: 3px solid white;
+    border: 2px solid white;
     cursor: pointer;
 
 }
 
-.botao.active {
-    background: brown;
+.botao.botaoAtivado {
+    background: seagreen;
 }
 
 .conteudo {
-    margin-left: 10%;
-    margin-right: 10%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    
 }
 
 .botoes-carrossel {
@@ -93,9 +97,11 @@ body {
 }
 
 .informacoes {
+
+    margin-left: 10vw;
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: 6vh;
 }
 
 .conteudo::after {

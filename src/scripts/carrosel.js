@@ -1,36 +1,32 @@
-const botoes = document.querySelectorAll(".botao")
-const imagens = document.querySelectorAll(".imagem")
+const botoes = document.querySelectorAll(".botao");
+const imagens = document.querySelectorAll(".imagem");
 
-//funcao carrosel que passa as imagems
-function passadorCarrosel(listaDeImagens,proximaImagem,atual){
-    
+botoes.forEach((botao, indexBotao) => {
+  botao.addEventListener("click", () => {
+    desativarBotaoAnterior();
 
+    selecionaBotao(botao);
 
-    listaDeImagens.forEach((element,index)=>{
+    ocultaImagemAnterior();
 
-      if(index!==atual){
+    mostraImagem(indexBotao);
+  });
+});
 
-        element.classList.remove("active")
-
-      }else{
-        element.classList.add("active")
-      }
-
-      botoes.forEach((element,index)=>{
-        if(index==atual){
-            element.classList.add("active")
-        }else{
-            element.classList.remove("active")
-        }
-      })
-
-
-    });
+function selecionaBotao(botao) {
+  botao.classList.add("botaoAtivado");
 }
 
-//adicionando a funcao passador de carrosel para o evento click de cada botão
-botoes.forEach((element,index)=>{
-    element.addEventListener("click",()=>{
-        passadorCarrosel(imagens,imagens[index],index)
-    })
-})
+function mostraImagem(indexBotao) {
+  imagens[indexBotao].classList.add("active");
+}
+
+function ocultaImagemAnterior() {
+  const imagemAtiva = document.querySelector(".active");
+  imagemAtiva.classList.remove("active");
+}
+
+function desativarBotaoAnterior() {
+  const botaoAtivo = document.querySelector(".botaoAtivado");
+  botaoAtivo.classList.remove("botaoAtivado");
+}
