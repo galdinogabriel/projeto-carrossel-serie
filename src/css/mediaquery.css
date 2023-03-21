@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .menu-lateral {
+		display: block;
+        
+        position: static;
+        height: unset;
+        margin: unset;
+        padding: 0;
+        
+	}
+
+    .conteudo{
+        justify-content: space-evenly;
+    
+    }
+    .menu-lateral ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+    }
+
+    .botao {
+        padding: 5px;
+    }
+}
